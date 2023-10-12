@@ -20,7 +20,7 @@ def create_dataset():
     return dataset
 
 
-def forcasting(dataset):
+def linear_regression(dataset):
     inputs = []
     outputs = []
     for data in dataset:
@@ -45,7 +45,7 @@ def forcasting(dataset):
 
 if __name__ == '__main__':
     dataset = create_dataset()
-    reg, error = forcasting(dataset)
+    reg, error = linear_regression(dataset)
     print(f'a={reg.coef_} b=†{reg.intercept_}')
     print(f'error={error}')
 
